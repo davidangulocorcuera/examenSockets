@@ -76,6 +76,8 @@ public class LoteriaServidor {
                }
 
 
+
+
                 String mensajeEnviar = resultado_comprobacion;
 
                 os.write(mensajeEnviar.getBytes());
@@ -86,8 +88,7 @@ public class LoteriaServidor {
                 serverSocket.close();
 
                 // En caso de que toque cualquier premio finalizamos el programa
-                if(resultado_comprobacion.equalsIgnoreCase("1") | resultado_comprobacion.equalsIgnoreCase("0")
-                | resultado_comprobacion.equalsIgnoreCase("2") | resultado_comprobacion.equalsIgnoreCase("3")){
+                if(resultado_comprobacion.equalsIgnoreCase("0")){
                     salir = true;
                 }
 

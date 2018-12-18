@@ -39,8 +39,8 @@ public class LoteriaCliente {
                 String respuesta = new String(mensajeRecibir);
                 // 1 es premio gordo
                 if(respuesta.equalsIgnoreCase("1")){
-                    System.out.println("Enhorabuena te ha tocado el gordo!");
-                    salir = true;
+                    System.out.println("Enhorabuena te ha tocado el gordo! introduce otro para seguir comprobando"+
+                            " o introduce 0 para finalizar  el programa");
                 }
                 // el cero finaliza el programa
                 else if(respuesta.equalsIgnoreCase("0")){
@@ -49,13 +49,15 @@ public class LoteriaCliente {
                 }
                 // el 2 es el numero siguiente al gordo
                 else if(respuesta.equalsIgnoreCase("2")){
-                    System.out.println("te ha tocado el número siguiente al gordo!");
-                    salir = true;
+                    System.out.println("te ha tocado el número siguiente al gordo! introduce otro para seguir comprobando"+
+                            " o introduce 0 para finalizar  el programa");
+
                 }
                 // el 3 es el numero aterior al gordo
                 else if(respuesta.equalsIgnoreCase("3")){
-                    System.out.println("te ha tocado el número anterior al gordo!");
-                    salir = true;
+                    System.out.println("te ha tocado el número anterior al gordo! introduce otro para seguir comprobando" +
+                            " o introduce 0 para finalizar  el programa");
+
                 }
                 // el 3 es el numero aterior al gordo
                 else if(respuesta.equalsIgnoreCase("4")){
