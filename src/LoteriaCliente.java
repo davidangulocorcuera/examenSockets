@@ -57,6 +57,12 @@ public class LoteriaCliente {
                     System.out.println("te ha tocado el número anterior al gordo!");
                     salir = true;
                 }
+                // el 3 es el numero aterior al gordo
+                else if(respuesta.equalsIgnoreCase("4")){
+                    System.out.println("No te ha tocado nada en este numero, introduce otro para seguir comprobando" +
+                            " o introduce 0 para finalizar el programa");
+
+                }
                 System.out.println("resultado: " + respuesta);
                 clientSocket.close();
 

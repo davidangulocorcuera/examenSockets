@@ -14,6 +14,7 @@ public class LoteriaServidor {
         int numero_recibido;
         String resultado_comprobacion = "defecto";
         boolean salir = false;
+        boolean premio = false;
         do{
 
             try {
@@ -49,21 +50,29 @@ public class LoteriaServidor {
                         System.out.println("Este numero estaba premiado con el gordo");
                         // 1 es premio gordo
                         resultado_comprobacion = "1";
+                        premio = true;
                }
                else if(numero_recibido == 0){
                    // 0 finaliza el servidor y el cliente
                    System.out.print("has finalizado el programa");
                    resultado_comprobacion = "0";
+                   premio = true;
                }
                else if (numero_recibido == (numero_premiado + 1)){
                    System.out.print("te ha tocado el numero siguiente!");
                    // 2 es el numero siguiente
                    resultado_comprobacion = "2";
+                   premio = true;
                }
                else if (numero_recibido == (numero_premiado - 1)){
                    System.out.print("te ha tocado el numero anterior!");
                    // 3 es el numero anterior
                    resultado_comprobacion = "3";
+                   premio = true;
+               }
+               else if (numero_recibido != numero_premiado && !premio){
+                   // 4 significa que no te ha tocado nada y puedes seguir introduciendo numeros.
+                   resultado_comprobacion = "4";
                }
 
 
