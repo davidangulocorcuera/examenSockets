@@ -15,6 +15,9 @@ public class LoteriaServidor {
         String resultado_comprobacion = "defecto";
         boolean salir = false;
         boolean premio = false;
+
+
+
         do{
 
             try {
@@ -74,6 +77,7 @@ public class LoteriaServidor {
                    // 4 significa que no te ha tocado nada y puedes seguir introduciendo numeros.
                    resultado_comprobacion = "4";
                }
+
 
 
 
