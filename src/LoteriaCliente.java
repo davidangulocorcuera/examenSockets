@@ -47,6 +47,16 @@ public class LoteriaCliente {
                     System.out.println("has finalizado el programa");
                     salir = true;
                 }
+                // el 2 es el numero siguiente al gordo
+                else if(respuesta.equalsIgnoreCase("2")){
+                    System.out.println("te ha tocado el número siguiente al gordo!");
+                    salir = true;
+                }
+                // el 3 es el numero aterior al gordo
+                else if(respuesta.equalsIgnoreCase("3")){
+                    System.out.println("te ha tocado el número anterior al gordo!");
+                    salir = true;
+                }
                 System.out.println("resultado: " + respuesta);
                 clientSocket.close();
 

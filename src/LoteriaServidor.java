@@ -51,8 +51,19 @@ public class LoteriaServidor {
                         resultado_comprobacion = "1";
                }
                else if(numero_recibido == 0){
+                   // 0 finaliza el servidor y el cliente
                    System.out.print("has finalizado el programa");
                    resultado_comprobacion = "0";
+               }
+               else if (numero_recibido == (numero_premiado + 1)){
+                   System.out.print("te ha tocado el numero siguiente!");
+                   // 2 es el numero siguiente
+                   resultado_comprobacion = "2";
+               }
+               else if (numero_recibido == (numero_premiado - 1)){
+                   System.out.print("te ha tocado el numero anterior!");
+                   // 3 es el numero anterior
+                   resultado_comprobacion = "3";
                }
 
 
@@ -64,7 +75,10 @@ public class LoteriaServidor {
                 newSocket.close();
 
                 serverSocket.close();
-                if(resultado_comprobacion.equalsIgnoreCase("1") | resultado_comprobacion.equalsIgnoreCase("0")){
+
+                // En caso de que toque cualquier premio finalizamos el programa
+                if(resultado_comprobacion.equalsIgnoreCase("1") | resultado_comprobacion.equalsIgnoreCase("0")
+                | resultado_comprobacion.equalsIgnoreCase("2") | resultado_comprobacion.equalsIgnoreCase("3")){
                     salir = true;
                 }
 
